@@ -1,0 +1,36 @@
+public class interest
+{
+public static void main(String args[])
+{
+float amount,interest,SI,CI,tem;
+int year,i;
+String source,L;
+System.out.println("Enter the type of interest needed");
+source=args[0];
+L=source.toLowerCase();
+
+ if(L.equals("simple interest"))
+ {
+ System.out.println("Enter Amount"+"Enter interest"+"Enter year");
+ amount=Float.parseFloat(args[1]);
+ interest=Float.parseFloat(args[2]);
+ year=Integer.parseInt(args[3]);
+ SI=amount*interest*year;
+ System.out.println("Simple Interest is" + SI);
+ }
+ 
+ if(L.equals("compound interest"))
+ {
+  System.out.println("Enter Amount"+"Enter interest"+"Enter year");
+  amount=Float.parseFloat(args[1]);
+  interest=Float.parseFloat(args[2]);
+  year=Integer.parseInt(args[3]);
+   for(i=1;i<year;i++)
+   {
+   CI=amount*interest*i;
+   temp+=CI;
+   }
+  System.out.println("Compound Interest is:" + temp);
+ }
+}
+}
